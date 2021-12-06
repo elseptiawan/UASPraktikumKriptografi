@@ -31,7 +31,7 @@ string ROT13(string teks, int a, int b)
     {
         if (int(teks[i]) == 32)
         {
-            hasil += char(int((teks[i] - 32)) % 26 + 32);
+            hasil += char(int(teks[i]));
         }
         else
         {
@@ -56,7 +56,7 @@ string enkripsiAffine(string teks, int a, int b)
     {
         if (int(teks[i]) == 32)
         {
-            hasil += char(int((teks[i] - 32)) % 26 + 32);
+            hasil += char(int(teks[i]));
         }
         else
         {
@@ -90,7 +90,7 @@ string dekripsiAffine(string teks, int a, int b)
     {
         if (int(teks[i]) == 32)
         {
-            hasil += char(int((teks[i] - 32)) % 26 + 32);
+            hasil += char(int(teks[i]));
         }
         else
         {
