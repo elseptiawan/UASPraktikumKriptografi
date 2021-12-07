@@ -11,6 +11,7 @@ int main()
 {
     string teks;
     int a, b;
+    char option;
     cout << "Masukkan plaintext : ";
     getline(cin >> ws, teks);
     cout << "a : ";
@@ -33,6 +34,15 @@ int main()
     cout << "\nEncrypted of Affine : " << teks;
     cout << "\nSo, The Chiperteks\t: " << teks << endl;
 
+    cout << "\n\nare you ready for the Decrypted? (Y/N)\n";
+    cin >> option;
+
+    if(option == 'Y' || option == 'y'){
+    cout << endl << endl << endl;
+    system("color 07");
+    load();
+    cout << endl << endl << endl;
+
     cout << "\n\n------------------ Decrypted ------------------" << endl << endl;
     cout << "ROT13 method\n";
     teks = ROT13(teks, a, b);
@@ -42,6 +52,9 @@ int main()
     teks = dekripsiAffine(teks, a, b);
     cout << "\nDecrypted of Affine : " << teks;
     cout << "\nSo, The Plainteks\t: " << teks << endl;
+    } else{
+        cout << "\nOkey, see you in the good time!\n";
+    }
 }
 
 void load()
