@@ -1,6 +1,8 @@
 #include <iostream>
+#include<windows.h>
 using namespace std;
 
+void load();
 string ROT13(string teks, int a, int b);
 string enkripsiAffine(string teks, int a, int b);
 string dekripsiAffine(string teks, int a, int b);
@@ -15,12 +17,42 @@ int main()
     cin >> a;
     cout << "b : ";
     cin >> b;
+
+    cout << endl << endl << endl;
+    system("color 07");
+    load();
+    cout << endl << endl << endl;
+
+    cout << "------------------ Encrypted ------------------" << endl << endl;
+    cout << "First, we use ROT13 method\n";
     teks = ROT13(teks, a, b);
+    cout << "Encrypted of ROT 13 : " << teks;
+
+    cout << "\n\nNext, we use Affine method for double encrypted";
     teks = enkripsiAffine(teks, a, b);
-    cout << "Chiperteks\t: " << teks << endl;
+    cout << "\nEncrypted of Affine : " << teks;
+    cout << "\nSo, The Chiperteks\t: " << teks << endl;
+
+    cout << "\n\n------------------ Decrypted ------------------" << endl << endl;
+    cout << "ROT13 method\n";
     teks = ROT13(teks, a, b);
+    cout << "Decrypted of ROT 13 : " << teks;
+
+    cout << "\n\nAffine method";
     teks = dekripsiAffine(teks, a, b);
-    cout << "Plainteks\t: " << teks;
+    cout << "\nDecrypted of Affine : " << teks;
+    cout << "\nSo, The Plainteks\t: " << teks << endl;
+}
+
+void load()
+{
+    char a = 219;
+    cout << "Loading..."<< endl;
+    for(int r =1; r<=20; r++)
+    {
+        for(int q=0; q<=10000000; q++);
+        cout << a;
+    }
 }
 
 string ROT13(string teks, int a, int b)
