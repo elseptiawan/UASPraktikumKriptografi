@@ -235,7 +235,7 @@ int main()
             {
             case 1:
                 isRelatifPrima = false;
-                cout << "Masukkan plaintext : ";
+                cout << "Masukkan Chiperteks : ";
                 getline(cin >> ws, teks);
                 cout << "a : ";
                 cin >> a;
@@ -282,7 +282,7 @@ int main()
                 cin >> loop;
                 break;
             case 2:
-                cout << "Masukkan plaintext : ";
+                cout << "Masukkan Chipherteks : ";
                 getline(cin >> ws, teks);
                 cout << endl
                      << endl
@@ -303,7 +303,7 @@ int main()
                 break;
             case 3:
                 isRelatifPrima = false;
-                cout << "Masukkan plaintext : ";
+                cout << "Masukkan Chipherteks : ";
                 getline(cin >> ws, teks);
                 cout << "a : ";
                 cin >> a;
