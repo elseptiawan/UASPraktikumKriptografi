@@ -20,6 +20,13 @@ int main()
     {
         clear;
         cout << "=========|Program ROT 13 & Affine Cipher|=========\n";
+        cout << "====================Created by====================\n";
+        cout << "========Muhammad Faiq       (140810190012)========\n";
+        cout << "========Join Valentino      (140810190020)========\n";
+        cout << "========Elshandi Septiawan  (140810190050)========\n";
+        Sleep(7000);
+        clear;
+        cout << "=========|Program ROT 13 & Affine Cipher|=========\n";
         cout << "1. Enkripsi" << endl;
         cout << "2. Dekripsi" << endl;
         cout << "3. Exit" << endl;
