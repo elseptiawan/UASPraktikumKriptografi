@@ -20,6 +20,13 @@ int main()
     {
         clear;
         cout << "=========|Program ROT 13 & Affine Cipher|=========\n";
+        cout << "====================Created by====================\n";
+        cout << "========Muhammad Faiq       (140810190012)========\n";
+        cout << "========Join Valentino      (140810190020)========\n";
+        cout << "========Elshandi Septiawan  (140810190050)========\n";
+        Sleep(7000);
+        clear;
+        cout << "=========|Program ROT 13 & Affine Cipher|=========\n";
         cout << "1. Enkripsi" << endl;
         cout << "2. Dekripsi" << endl;
         cout << "3. Exit" << endl;
@@ -235,7 +242,7 @@ int main()
             {
             case 1:
                 isRelatifPrima = false;
-                cout << "Masukkan plaintext : ";
+                cout << "Masukkan Chiperteks : ";
                 getline(cin >> ws, teks);
                 cout << "a : ";
                 cin >> a;
@@ -282,7 +289,7 @@ int main()
                 cin >> loop;
                 break;
             case 2:
-                cout << "Masukkan plaintext : ";
+                cout << "Masukkan Chipherteks : ";
                 getline(cin >> ws, teks);
                 cout << endl
                      << endl
@@ -303,7 +310,7 @@ int main()
                 break;
             case 3:
                 isRelatifPrima = false;
-                cout << "Masukkan plaintext : ";
+                cout << "Masukkan Chipherteks : ";
                 getline(cin >> ws, teks);
                 cout << "a : ";
                 cin >> a;
