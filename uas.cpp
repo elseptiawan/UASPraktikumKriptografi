@@ -351,7 +351,7 @@ int main()
         case 3:
             return 0;
         }
-    } while (loop = 'Y' || loop == 'y');
+    } while (loop == 'y' || loop == 'Y');
 }
 
 void load()
