@@ -41,6 +41,7 @@ int main()
             {
             case 1:
                 clear;
+                isRelatifPrima = false;
                 cout << "Masukkan plaintext : ";
                 getline(cin >> ws, teks);
                 cout << "a : ";
@@ -160,12 +161,29 @@ int main()
                 cin >> loop;
                 break;
             case 3:
+                isRelatifPrima = false;
                 cout << "Masukkan plaintext : ";
                 getline(cin >> ws, teks);
                 cout << "a : ";
                 cin >> a;
                 cout << "b : ";
                 cin >> b;
+
+                isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                while (!isRelatifPrima)
+                {
+                    cout << "a ridak relatif prima terhadap 26, coba nilai yang lain" << endl
+                         << endl;
+                    system("PAUSE");
+                    clear;
+                    cout << "Masukkan plaintext : ";
+                    getline(cin >> ws, teks);
+                    cout << "a : ";
+                    cin >> a;
+                    cout << "b : ";
+                    cin >> b;
+                    isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                }
 
                 cout << endl
                      << endl
@@ -216,12 +234,30 @@ int main()
             switch (algoritma)
             {
             case 1:
+                isRelatifPrima = false;
                 cout << "Masukkan plaintext : ";
                 getline(cin >> ws, teks);
                 cout << "a : ";
                 cin >> a;
                 cout << "b : ";
                 cin >> b;
+
+                isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                while (!isRelatifPrima)
+                {
+                    cout << "a ridak relatif prima terhadap 26, coba nilai yang lain" << endl
+                         << endl;
+                    system("PAUSE");
+                    clear;
+                    cout << "Masukkan plaintext : ";
+                    getline(cin >> ws, teks);
+                    cout << "a : ";
+                    cin >> a;
+                    cout << "b : ";
+                    cin >> b;
+                    isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                }
+
                 cout << endl
                      << endl
                      << endl;
@@ -266,12 +302,30 @@ int main()
                 cin >> loop;
                 break;
             case 3:
+                isRelatifPrima = false;
                 cout << "Masukkan plaintext : ";
                 getline(cin >> ws, teks);
                 cout << "a : ";
                 cin >> a;
                 cout << "b : ";
                 cin >> b;
+
+                isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                while (!isRelatifPrima)
+                {
+                    cout << "a ridak relatif prima terhadap 26, coba nilai yang lain" << endl
+                         << endl;
+                    system("PAUSE");
+                    clear;
+                    cout << "Masukkan plaintext : ";
+                    getline(cin >> ws, teks);
+                    cout << "a : ";
+                    cin >> a;
+                    cout << "b : ";
+                    cin >> b;
+                    isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                }
+
                 cout << endl
                      << endl
                      << endl;
