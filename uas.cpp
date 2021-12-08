@@ -5,12 +5,14 @@ using namespace std;
 
 void load();
 string ROT13(string teks, int a, int b);
+boolean relatifPrima(boolean isRelatifPrima, int a);
 string enkripsiAffine(string teks, int a, int b);
 string dekripsiAffine(string teks, int a, int b);
 
 int main()
 {
     string teks;
+    boolean isRelatifPrima = false;
     int a, b, menu, algoritma;
     char option, loop;
 
@@ -38,12 +40,28 @@ int main()
             switch (algoritma)
             {
             case 1:
+                clear;
                 cout << "Masukkan plaintext : ";
                 getline(cin >> ws, teks);
                 cout << "a : ";
                 cin >> a;
                 cout << "b : ";
                 cin >> b;
+                isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                while (!isRelatifPrima)
+                {
+                    cout << "a ridak relatif prima terhadap 26, coba nilai yang lain" << endl
+                         << endl;
+                    system("PAUSE");
+                    clear;
+                    cout << "Masukkan plaintext : ";
+                    getline(cin >> ws, teks);
+                    cout << "a : ";
+                    cin >> a;
+                    cout << "b : ";
+                    cin >> b;
+                    isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                }
 
                 cout << endl
                      << endl
@@ -292,6 +310,20 @@ void load()
             ;
         cout << a;
     }
+}
+
+boolean relatifPrima(boolean isRelatifPrima, int a)
+{
+    for (int i = 0; i < 26; i++)
+    {
+        if ((a * i) % 26 == 1)
+        {
+            isRelatifPrima = true;
+            break;
+        }
+    }
+
+    return isRelatifPrima;
 }
 
 string ROT13(string teks, int a, int b)
