@@ -41,7 +41,8 @@ int main()
             cout << "1. ROT13 + Affine Cipher" << endl;
             cout << "2. ROT13" << endl;
             cout << "3. Affine Cipher" << endl;
-            cout << "4. Back to Menu" << endl;
+            cout << "4. Affine Cipher + ROT13" << endl;
+            cout << "5. Back to Menu" << endl;
             cout << "Pilih Algoritma : ";
             cin >> algoritma;
             switch (algoritma)
@@ -225,6 +226,83 @@ int main()
                 cin >> loop;
                 break;
             case 4:
+                clear;
+                isRelatifPrima = false;
+                cout << "Masukkan plaintext : ";
+                getline(cin >> ws, teks);
+                cout << "a : ";
+                cin >> a;
+                cout << "b : ";
+                cin >> b;
+                isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                while (!isRelatifPrima)
+                {
+                    cout << "a ridak relatif prima terhadap 26, coba nilai yang lain" << endl
+                         << endl;
+                    system("PAUSE");
+                    clear;
+                    cout << "Masukkan plaintext : ";
+                    getline(cin >> ws, teks);
+                    cout << "a : ";
+                    cin >> a;
+                    cout << "b : ";
+                    cin >> b;
+                    isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                }
+
+                cout << endl
+                     << endl
+                     << endl;
+                system("color 07");
+                load();
+                cout << endl
+                     << endl
+                     << endl;
+
+                cout << "------------------ Encrypted ------------------" << endl
+                     << endl;
+                cout << "First, we use Affine Cipher method\n";
+                teks = enkripsiAffine(teks, a, b);
+                cout << "Encrypted of Affine Cipher : " << teks;
+
+                cout << "\n\nNext, we use ROT13 method for double encrypted";
+                teks = ROT13(teks, a, b);
+                cout << "\nEncrypted of ROT13 : " << teks;
+                cout << "\nSo, The Chiperteks\t: " << teks << endl;
+
+                cout << "\n\nare you ready for the Decrypted? (Y/N)\n";
+                cin >> option;
+
+                if (option == 'Y' || option == 'y')
+                {
+                    cout << endl
+                         << endl
+                         << endl;
+                    system("color 07");
+                    load();
+                    cout << endl
+                         << endl
+                         << endl;
+
+                    cout << "\n\n------------------ Decrypted ------------------" << endl
+                         << endl;
+                    cout << "Affine method\n";
+                    teks = dekripsiAffine(teks, a, b);
+                    cout << "Decrypted of Affine : " << teks;
+
+                    cout << "\n\nROT13 method";
+                    teks = ROT13(teks, a, b);
+                    cout << "\nDecrypted of ROT13 : " << teks;
+                    cout << "\nSo, The Plainteks\t: " << teks << endl;
+                }
+                else
+                {
+                    cout << "\nOkey, see you in the good time!\n";
+                }
+                cout << "\n\nApakah anda ingin mengulang? (y/n) -> ";
+                cin >> loop;
+                break;
+            case 5:
                 loop = 'y';
                 break;
             }
@@ -235,7 +313,8 @@ int main()
             cout << "1. ROT13 + Affine Cipher" << endl;
             cout << "2. ROT13" << endl;
             cout << "3. Affine Cipher" << endl;
-            cout << "4. Back to Menu" << endl;
+            cout << "4. Affine Cipher + ROT13" << endl;
+            cout << "5. Back to Menu" << endl;
             cout << "Pilih Algoritma : ";
             cin >> algoritma;
             switch (algoritma)
@@ -351,6 +430,54 @@ int main()
                 cin >> loop;
                 break;
             case 4:
+                clear;
+                isRelatifPrima = false;
+                cout << "Masukkan plaintext : ";
+                getline(cin >> ws, teks);
+                cout << "a : ";
+                cin >> a;
+                cout << "b : ";
+                cin >> b;
+                isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                while (!isRelatifPrima)
+                {
+                    cout << "a ridak relatif prima terhadap 26, coba nilai yang lain" << endl
+                         << endl;
+                    system("PAUSE");
+                    clear;
+                    cout << "Masukkan plaintext : ";
+                    getline(cin >> ws, teks);
+                    cout << "a : ";
+                    cin >> a;
+                    cout << "b : ";
+                    cin >> b;
+                    isRelatifPrima = relatifPrima(isRelatifPrima, a);
+                }
+
+                cout << endl
+                     << endl
+                     << endl;
+                system("color 07");
+                load();
+                cout << endl
+                     << endl
+                     << endl;
+
+                cout << "\n\n------------------ Decrypted ------------------" << endl
+                     << endl;
+                cout << "Affine method\n";
+                teks = dekripsiAffine(teks, a, b);
+                cout << "Decrypted of Affine : " << teks;
+
+                cout << "\n\nROT13 method";
+                teks = ROT13(teks, a, b);
+                cout << "\nDecrypted of ROT13 : " << teks;
+                cout << "\nSo, The Plainteks\t: " << teks << endl;
+
+                cout << "\n\nApakah anda ingin mengulang? (y/n) -> ";
+                cin >> loop;
+                break;
+            case 5:
                 loop = 'y';
                 break;
             }
